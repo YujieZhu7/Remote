@@ -73,7 +73,7 @@ plt.ylabel('Score')
 plt.legend()
 plt.savefig('/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Figure/Slide/RanNoise0.1/scores_BC.png')
 plt.show()
-
+plt.close()
 
 first_score_s1 = np.load(
     f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/EnsQfilter/RanNoise0.1/First/EnsSize_10_S1_score.npy")
@@ -141,6 +141,7 @@ plt.ylabel('Score')
 plt.legend()
 plt.savefig('/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Figure/Slide/RanNoise0.1/scores_multiseeds.png')
 plt.show()
+plt.close()
 #
 # x = np.arange(0, 5, 0.05)
 # first_success = np.load(
@@ -231,3 +232,4 @@ plt.ylabel('Accpetance Rate')
 plt.legend()
 plt.savefig('/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Figure/Slide/RanNoise0.1/demoaccepts_multiseeds.png')
 plt.show()
+plt.close()
