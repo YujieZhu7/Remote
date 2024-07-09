@@ -134,7 +134,7 @@ plt.plot(x, mean_score_s5[:10000:50], color='red', alpha=0.2)
 plt.plot(x, first_score_mean[:10000:50], color='blue', label='Qfilter')
 plt.plot(x, mean_score_mean[:10000:50], color='red', label='Mean')
 plt.plot(x, min_score_s1[:10000:50], color='orange', label='Minimum')
-plt.plot(x, lcb_score_s1[:10000:50], color='green', label='LCB')
+plt.plot(x, lcb_score_mean[:10000:50], color='green', label='LCB')
 
 plt.title('Scores')
 plt.xlabel('Environment interactions')
