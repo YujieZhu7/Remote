@@ -131,10 +131,11 @@ plt.plot(x, mean_score_s3[:10000:50], color='red', alpha=0.2)
 plt.plot(x, mean_score_s4[:10000:50], color='red', alpha=0.2)
 plt.plot(x, mean_score_s5[:10000:50], color='red', alpha=0.2)
 
-plt.plot(x, min_score_s1[:10000:50], color='orange', label='Min')
-plt.plot(x, lcb_score_s1[:10000:50], color='green', label='LCB')
 plt.plot(x, first_score_mean[:10000:50], color='blue', label='Qfilter')
 plt.plot(x, mean_score_mean[:10000:50], color='red', label='Mean')
+plt.plot(x, min_score_s1[:10000:50], color='orange', label='Minimum')
+plt.plot(x, lcb_score_s1[:10000:50], color='green', label='LCB')
+
 plt.title('Scores')
 plt.xlabel('Environment interactions')
 plt.ylabel('Score')
@@ -221,10 +222,11 @@ plt.plot(x, lcb_demoaccept_s3[:10000:50], color='green', alpha=0.2)
 plt.plot(x, lcb_demoaccept_s4[:10000:50], color='green', alpha=0.2)
 plt.plot(x, lcb_demoaccept_s5[:10000:50], color='green', alpha=0.2)
 
-plt.plot(x, min_demoaccept_s1[:10000:50], color='orange', label='First')
 plt.plot(x, first_demoaccept_s1[:10000:50], color='blue', label='First')
-plt.plot(x, lcb_demoaccept_s1[:10000:50], color='green', label='LCB')
 plt.plot(x, mean_demoaccept_s1[:10000:50], color='red', label='Mean')
+plt.plot(x, min_demoaccept_s1[:10000:50], color='orange', label='Minimum')
+plt.plot(x, lcb_demoaccept_s1[:10000:50], color='green', label='LCB')
+
 
 plt.title('Accpetance Rate of demonstrations')
 plt.xlabel('Environment interactions')
