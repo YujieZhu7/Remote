@@ -1,5 +1,5 @@
 import sys
-import gym
+import gymnasium as gym
 import torch
 import numpy as np
 import random
