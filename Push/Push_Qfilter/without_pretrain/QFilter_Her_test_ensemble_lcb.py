@@ -53,7 +53,7 @@ env_name = 'FetchPush'
 env = gym.make('FetchPush-v2')
 env_train = gym.make('FetchPush-v2')
 env_eval = gym.make('FetchPush-v2')
-method = "LCB"
+method = "LCB0.5"
 if method == "MCDropout":
     drop_rate = 0.1
 else:
