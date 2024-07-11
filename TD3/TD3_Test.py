@@ -12,8 +12,8 @@ import TD3
 
 # Load environment
 env_name = 'Ant'
-env = gym.make('Ant-v2')
-env_eval = gym.make('Ant-v2')
+env = gym.make('Ant-v4')
+env_eval = gym.make('Ant-v4')
 # Set seeds
 seed =5
 offset = 100
