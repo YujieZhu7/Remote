@@ -11,8 +11,9 @@ import TD3
 #
 
 # Load environment
-env = gym.make('HalfCheetah-v2')
-env_eval = gym.make('HalfCheetah-v2')
+env_name = 'Ant'
+env = gym.make('Ant-v2')
+env_eval = gym.make('Ant-v2')
 # Set seeds
 seed =5
 offset = 100
@@ -44,7 +45,7 @@ episodes_eval = 10
 
 # Record wandb metrics
 #Hopper_dim = (400,300)
-agent = TD3.Agent(state_dim, action_dim, max_action, hidden_dim=(400,300),lr=(1e-3,1e-3),batch_size=batch_size,
+agent = TD3.Agent(state_dim, action_dim, max_action, hidden_dim=(256,256),lr=(1e-3,1e-3),batch_size=batch_size,
                   policy_noise = 0.2, device=device)
 
 while steps < max_steps + 1:
@@ -95,13 +96,13 @@ while steps < max_steps + 1:
             print("Episode", episodes, "Env Steps", steps, "Score %.2f" % score_eval)
 
     episodes += 1
-np.save(f"Results/HalfCheetah/TD3_S{seed}",score_history)
+np.save(f"Results/Ant/TD3_S{seed}",score_history)
 
-# torch.save(agent.actor.state_dict(),
-#                                    "/home/hepbur_c@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/PhD/Demonstrations/Models/TD3_expert_actor_halfcheetah")
-# torch.save(agent.actor_target.state_dict(),
-#                                    "/home/hepbur_c@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/PhD/Demonstrations/Models/TD3_expert_actortarget_halfcheetah")
-# torch.save(agent.critic.state_dict(),
-#                                    "/home/hepbur_c@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/PhD/Demonstrations/Models/TD3_expert_critic_halfcheetah")
-# torch.save(agent.critic_target.state_dict(),
-#                                    "/home/hepbur_c@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/PhD/Demonstrations/Models/TD3_expert_critictarget_halfcheetah")
+torch.save(agent.actor.state_dict(),
+                                   "/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/SaveModels/{env_name}/TD3_expert_actor")
+torch.save(agent.actor_target.state_dict(),
+                                   "/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/SaveModels/{env_name}/TD3_expert_actortarget")
+torch.save(agent.critic.state_dict(),
+                                   "/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/SaveModels/{env_name}/TD3_expert_critic")
+torch.save(agent.critic_target.state_dict(),
+                                   "/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/SaveModels/{env_name}/TD3_expert_critictarget")
