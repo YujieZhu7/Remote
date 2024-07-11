@@ -24,7 +24,7 @@ plt.show()
 plt.close()
 
 loss = np.load(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/BC/RandGausNoise/S5_loss.npy")
-plt.plot(loss)
+plt.plot(x, loss[1::20])
 
 plt.title('Loss of Actor by BC')
 plt.xlabel('Environment interactions (2e6)')
