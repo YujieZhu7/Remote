@@ -4,7 +4,7 @@ import torch
 import numpy as np
 import random
 import pickle
-import MCdropout as TD3
+import MCdropout4 as TD3
 
 # use the ensemble method first, then consider MC dropout
 
