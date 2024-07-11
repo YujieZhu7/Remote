@@ -65,7 +65,9 @@ class VectorizedCritic(nn.Module):
         state_action = state_action.unsqueeze(0).repeat_interleave(self.num_critics, dim=0)
 
         q_values = F.relu(self.l1(state_action))
+        q_values = self.dropout(q_values)
         q_values = F.relu(self.l2(q_values))
+        q_values = self.dropout(q_values)
         q_values = F.relu(self.l3(q_values))
         q_values = self.dropout(q_values)
         q_values = F.relu(self.l4(q_values))
