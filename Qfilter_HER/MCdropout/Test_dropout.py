@@ -55,7 +55,7 @@ env_train = gym.make('FetchPush-v2')
 env_eval = gym.make('FetchPush-v2')
 method = "First"
 
-drop_rate = 0.08
+drop_rate = 0.03
 ensemble_size = 2
 # Set seeds
 seed = 5
