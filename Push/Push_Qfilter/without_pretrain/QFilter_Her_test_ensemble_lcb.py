@@ -4,7 +4,7 @@ import torch
 import numpy as np
 import random
 import pickle
-import TD3_HER_Qfilter_ensemble as TD3
+from Qfilter_HER.Algo import TD3_HER_Qfilter_ensemble as TD3
 
 # use the ensemble method first, then consider MC dropout
 
