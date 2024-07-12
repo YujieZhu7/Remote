@@ -175,7 +175,7 @@ class Agent(object):
             demos_next_input = torch.Tensor(demos_next_input).to(self.device)
 
             # Critic #
-            self.critic_target = self.critic_target.eval()
+            self.critic_target = self.critic_target.train()
             with torch.no_grad():
                 noise = (torch.randn_like(action) * self.policy_noise).clamp(-self.noise_clip, self.noise_clip)
                 next_action = (self.actor_target(next_input) + noise).clamp(-self.max_action, self.max_action)
