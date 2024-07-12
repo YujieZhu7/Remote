@@ -57,7 +57,7 @@ mcdropout_first_demoAccept = np.load(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/Pycha
 mcdropout_lcb_demoAccept = np.load(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/DropoutQfilter/DropoutRate0.03/LCB/0.5+1EnsSize_2_S5_demoaccept.npy")
 
 plt.plot(x, Qfilter_demoAccept[:4000:20], color='purple', label='Qfilter')
-plt.plot(x, mcdropout_mean_demoAccept2[:4000:20], color='orange', label='mcdropout_mean_0.01')
+plt.plot(x, mcdropout_mean_demoAccept2[:4000:20], color='green', label='mcdropout_mean_0.01')
 plt.plot(x, mcdropout_mean_demoAccept[:4000:20], color='orange', label='mcdropout_mean')
 plt.plot(x, mcdropout_first_demoAccept[:4000:20], color='red', label='mcdropout_first')
 plt.plot(x, mcdropout_lcb_demoAccept[:4000:20], color='blue', label='mcdropout_lcb')
